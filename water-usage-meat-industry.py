@@ -132,4 +132,12 @@ print("\n\n\nFinding dominant eigenvector...")
 dominant_eig = ev1 if ((ev1[0] >= ev2[0]) and (ev1[1] >= ev2[1])) else ev2
 print("Dominant eigenvector: " + str(dominant_eig) + "\n\n")
 
+f= open("eigenvectors.txt","w+")
+
+f.write(str(ev1[0][0]))
+f.write("\n"+str(ev1[1][0]))
+f.write("\n"+str(ev2[0][0]))
+f.write("\n"+str(ev2[1][0]))
+
+f.close()
 
